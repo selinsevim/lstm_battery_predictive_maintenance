@@ -1,4 +1,4 @@
-# Battery Predictive Maintenance using LSTM
+# Battery RUL Predictive Maintenance using LSTM
 
 This project leverages Long Short-Term Memory (LSTM) neural networks to predict the **Remaining Useful Life (RUL)** of batteries based on sequential time-series data. Accurate prediction of RUL helps in proactive maintenance and enhances the safety and efficiency of battery-powered systems.
 
