@@ -22,6 +22,27 @@ Battery 2 │  Cycles 1–20  ──> X1, y1
 
 ---
 
+## Project Structure
+
+```bash
+├── data/                    # Stored data
+│   └── raw/
+│   └── processed/
+├── src/
+│   └── inference.py         # Inference file
+│   └── model.py             # Training file
+│   └── processing.py        # Processing file
+├── scripts/
+│   └── run_training.py      # Run training file
+│   └── run_processing.py    # Run processing file
+├── logs/                    # TensorBoard logs
+├── analysis/                # Analysis notebook
+├── models/                  # Trained models
+├── ml_runs                  # Experiments meta data
+├── README.md
+├── requirements.txt
+```
+
 ## Project Highlights
 
 - LSTM-based deep learning model for time-series prediction
@@ -53,16 +74,82 @@ Predict the **Remaining Useful Life (RUL)** of lithium-ion batteries from featur
 
 ---
 
-## Project Structure
+## Features Used
+
+The following features were used per cycle for each battery.These features are scaled using MinMaxScaler per training set and reused for the test set to avoid leakage:
+
+| Category                |
+| ----------------------- |
+| discharge_time_s        |
+| decrement_3_6_3_4V      |
+| max_voltage_discharge_v |
+| min_voltage_charge_v    |
+| time_at_4_15V_s         |
+| time_constant_current_s |
+| charging_time_s         |
+
+## Data Processing Pipeline
+
+1. Read and Inspect CSV data
+2. Rename columns and create battery_id sequences
+3. Generate visualizations for correlation and feature exploration
+4. Scale features using MinMaxScaler
+5. Create LSTM-ready sequences per battery with a rolling window
+6. Train/Test Split by battery_id
+
+## Model Training
+
+You can choose between different LSTM architectures:
+
+simple_model() – single-layer LSTM
+
+simple_build_model() – slightly deeper model
+
+two_layer_build_model() – stacked LSTM with dropout
+
+The model is trained using:
+
+Mean Squared Error loss
+
+Mean Absolute Error as a metric
+
+TensorBoard and learning rate scheduling callbacks
 
 ```bash
-├── data/
-│   └── your_dataset.csv
-├── processing.py            # Data cleaning, feature selection, visualizations
-├── model.py                 # Model building, training, and evaluation
-├── logs/                    # TensorBoard logs
-├── saved_models/            # Trained models
-├── scaler.joblib            # Saved MinMaxScaler
-├── README.md
+train_model(trainX, trainY, testX, testY, log_dir_path)
+```
 
+## How to Run
+
+1. Install requirements (if not already):
+
+```bash
+pip install pandas numpy plotly scikit-learn tensorflow joblib
+```
+
+2. Update paths and run preprocessing:
+
+```bash
+df = read_csv('data/your_dataset.csv')
+df = inspect_data(df)
+```
+
+3. Scale and prepare sequences:
+
+```bash
+train_df, test_df = scale_datasets(df, train_ids=[1,2,3], test_ids=[4,5], scaler_path='scaler.joblib', features_to_scale=[...])
+trainX, trainY = create_lstm_sequences(train_df, features=features_list)
+testX, testY = create_lstm_sequences(test_df, features=features_list)
+```
+
+4. Train the model:
+
+```bash
+model, history = train_model(trainX, trainY, testX, testY, log_dir_path='logs/')
+```
+
+5. Monitor training in TensorBoard:
+
+```bash
+tensorboard --logdir=logs/
 ```
