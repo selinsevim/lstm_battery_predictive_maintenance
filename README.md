@@ -97,28 +97,6 @@ The following features were used per cycle for each battery.These features are s
 5. Create LSTM-ready sequences per battery with a rolling window
 6. Train/Test Split by battery_id
 
-## Model Training
-
-You can choose between different LSTM architectures:
-
-simple_model() – single-layer LSTM
-
-simple_build_model() – slightly deeper model
-
-two_layer_build_model() – stacked LSTM with dropout
-
-The model is trained using:
-
-Mean Squared Error loss
-
-Mean Absolute Error as a metric
-
-TensorBoard and learning rate scheduling callbacks
-
-```bash
-train_model(trainX, trainY, testX, testY, log_dir_path)
-```
-
 ## How to Run
 
 1. Install requirements (if not already):
