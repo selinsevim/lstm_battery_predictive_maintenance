@@ -1,0 +1,14 @@
+artifact_uri: /Users/selinsevim/Desktop/predictive_maintenance_rul_battery_model/ml_runs/674273899611329442/5005bd8d66944fa78d87ec99808f9115/artifacts
+end_time: 1750781172632
+entry_point_name: ''
+experiment_id: '674273899611329442'
+lifecycle_stage: active
+run_id: 5005bd8d66944fa78d87ec99808f9115
+run_name: blushing-donkey-279
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750781139647
+status: 3
+tags: []
+user_id: selinsevim

@@ -1,0 +1,14 @@
+artifact_uri: /Users/selinsevim/Desktop/predictive_maintenance_rul_battery_model/ml_runs/674273899611329442/c67b60b48361459c9f5dccd2162bd2cf/artifacts
+end_time: 1750770030958
+entry_point_name: ''
+experiment_id: '674273899611329442'
+lifecycle_stage: active
+run_id: c67b60b48361459c9f5dccd2162bd2cf
+run_name: capable-zebra-792
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750769504729
+status: 3
+tags: []
+user_id: selinsevim

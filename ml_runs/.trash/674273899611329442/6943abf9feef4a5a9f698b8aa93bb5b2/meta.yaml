@@ -1,0 +1,14 @@
+artifact_uri: /Users/selinsevim/Desktop/predictive_maintenance_rul_battery_model/ml_runs/674273899611329442/6943abf9feef4a5a9f698b8aa93bb5b2/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '674273899611329442'
+lifecycle_stage: active
+run_id: 6943abf9feef4a5a9f698b8aa93bb5b2
+run_name: thundering-finch-481
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750783316067
+status: 1
+tags: []
+user_id: selinsevim

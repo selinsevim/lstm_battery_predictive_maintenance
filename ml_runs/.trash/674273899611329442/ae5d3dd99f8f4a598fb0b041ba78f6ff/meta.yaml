@@ -1,0 +1,14 @@
+artifact_uri: /Users/selinsevim/Desktop/predictive_maintenance_rul_battery_model/ml_runs/674273899611329442/ae5d3dd99f8f4a598fb0b041ba78f6ff/artifacts
+end_time: 1750776781704
+entry_point_name: ''
+experiment_id: '674273899611329442'
+lifecycle_stage: active
+run_id: ae5d3dd99f8f4a598fb0b041ba78f6ff
+run_name: caring-quail-170
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750770129404
+status: 3
+tags: []
+user_id: selinsevim

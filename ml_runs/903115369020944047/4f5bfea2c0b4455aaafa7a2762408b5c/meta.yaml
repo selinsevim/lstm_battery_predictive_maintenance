@@ -1,0 +1,14 @@
+artifact_uri: /Users/selinsevim/Desktop/predictive_maintenance_rul_battery_model/ml_runs/903115369020944047/4f5bfea2c0b4455aaafa7a2762408b5c/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '903115369020944047'
+lifecycle_stage: active
+run_id: 4f5bfea2c0b4455aaafa7a2762408b5c
+run_name: wise-stag-4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751036440806
+status: 1
+tags: []
+user_id: selinsevim

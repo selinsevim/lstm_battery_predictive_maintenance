@@ -1,0 +1,14 @@
+artifact_uri: /Users/selinsevim/Desktop/predictive_maintenance_rul_battery_model/ml_runs/674273899611329442/d302ca0dd5d14dd68325ec379ab98c6b/artifacts
+end_time: 1750767316547
+entry_point_name: ''
+experiment_id: '674273899611329442'
+lifecycle_stage: active
+run_id: d302ca0dd5d14dd68325ec379ab98c6b
+run_name: shivering-dolphin-53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750766922488
+status: 3
+tags: []
+user_id: selinsevim
